@@ -84,5 +84,22 @@ namespace SpanLab
 
 
         }
+
+        private void StackButton_Click(object sender, EventArgs e)
+        {
+            DisplayListBox.Items.Clear();
+            Span<int> numbers = stackalloc int[3];
+
+            numbers[0] = 10;
+            numbers[1] = 20;
+            numbers[2] = 30;
+
+            foreach (int value in numbers)
+            {
+                DisplayListBox.Items.Add($"STACK ELEMENT: {value}");
+            }
+
+
+        }
     }
 }
