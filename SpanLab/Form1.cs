@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -99,6 +100,30 @@ namespace SpanLab
                 DisplayListBox.Items.Add($"STACK ELEMENT: {value}");
             }
 
+
+        }
+
+        private unsafe void UnsafeButton_Click(object sender, EventArgs e)
+        {
+            DisplayListBox.Items.Clear();
+
+            DisplayListBox.Items.Clear();
+            
+unsafe
+{
+int* buffer =
+stackalloc int[3];
+        buffer[0] = 10;
+buffer[1] = 20;
+buffer[2] = 30;
+Span<int>
+span = new Span<int>(buffer, 3);
+foreach (int value
+in span)
+{
+DisplayListBox.Items.Add($"BUFFER ELEMENT: {value}");
+}
+}
 
         }
     }

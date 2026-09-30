@@ -33,6 +33,7 @@
             this.StringSpanButton = new System.Windows.Forms.Button();
             this.SliceButton = new System.Windows.Forms.Button();
             this.StackButton = new System.Windows.Forms.Button();
+            this.UnsafeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DisplayListBox
@@ -84,11 +85,22 @@
             this.StackButton.UseVisualStyleBackColor = true;
             this.StackButton.Click += new System.EventHandler(this.StackButton_Click);
             // 
+            // UnsafeButton
+            // 
+            this.UnsafeButton.Location = new System.Drawing.Point(532, 189);
+            this.UnsafeButton.Name = "UnsafeButton";
+            this.UnsafeButton.Size = new System.Drawing.Size(161, 40);
+            this.UnsafeButton.TabIndex = 5;
+            this.UnsafeButton.Text = "Unsafe";
+            this.UnsafeButton.UseVisualStyleBackColor = true;
+            this.UnsafeButton.Click += new System.EventHandler(this.UnsafeButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.UnsafeButton);
             this.Controls.Add(this.StackButton);
             this.Controls.Add(this.SliceButton);
             this.Controls.Add(this.StringSpanButton);
@@ -107,6 +119,7 @@
         private System.Windows.Forms.Button StringSpanButton;
         private System.Windows.Forms.Button SliceButton;
         private System.Windows.Forms.Button StackButton;
+        private System.Windows.Forms.Button UnsafeButton;
     }
 }
 
